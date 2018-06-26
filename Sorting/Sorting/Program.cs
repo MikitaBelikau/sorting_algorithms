@@ -15,15 +15,12 @@ namespace Sorting
 
 		private static void Insertion_Sort(List<int> arr)
 		{
-
 			/**********************/
 			Console.WriteLine("Unsorted list");
-
 			foreach (var item in arr)
-			{
-				Console.WriteLine(item);
-			}
+			{Console.WriteLine(item);}
 			/***********************/
+
 
 			for (int j = 1; j < arr.Count; j++)
 			{
@@ -40,13 +37,11 @@ namespace Sorting
 				}
 			}
 
+
 			/**********************/
 			Console.WriteLine("Sorted list");
-
 			foreach (var item in arr)
-			{
-				Console.WriteLine(item);
-			}
+			{Console.WriteLine(item);}
 			/***********************/
 		
 		}
