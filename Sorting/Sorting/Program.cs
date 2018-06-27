@@ -25,16 +25,14 @@ namespace Sorting
 			for (int j = 1; j < arr.Count; j++)
 			{
 				int key = arr[j];
-
 				int i = j - 1;
 
-				while (i >= 0 && arr[i] > key)
+				while (i > -1 && arr[i] > key)
 				{
-					int temp = arr[i + 1];
 					arr[i + 1] = arr[i];
-					arr[i] = temp;
 					i = i - 1;
 				}
+                arr[i + 1] = key;
 			}
 
 
@@ -42,7 +40,9 @@ namespace Sorting
 			Console.WriteLine("Sorted list");
 			foreach (var item in arr)
 			{Console.WriteLine(item);}
-			/***********************/
+            /***********************/
+
+            Console.ReadLine();
 		
 		}
 
