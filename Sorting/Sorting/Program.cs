@@ -9,8 +9,8 @@ namespace Sorting
 		{
 			List<int> unsortedList = new List<int>() { 9, 1, 9, 3, 7, 0, 6, 2, 4, 5, -1, 8, 1, 9};
 
-
-			Insertion_Sort_Reverse(unsortedList);
+            //Insertion_Sort(unsortedList);
+            Insertion_Sort_Descending(unsortedList);
 		}
 
 		private static void Insertion_Sort(List<int> arr)
@@ -46,7 +46,7 @@ namespace Sorting
 		
 		}
 
-        private static void Insertion_Sort_Reverse(List<int> arr)
+        private static void Insertion_Sort_Descending(List<int> arr)
         {
             /**********************/
             Console.WriteLine("Unsorted list");
