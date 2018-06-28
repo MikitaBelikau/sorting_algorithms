@@ -8,12 +8,11 @@ namespace Sorting
 		public static void Main(string[] args)
 		{
 			List<int> unsortedList = new List<int>() { 9, 1, 9, 3, 7, 0, 6, 2, 4, 5, -1, 8, 1, 9};
+        }
 
-            //Insertion_Sort(unsortedList);
-            Insertion_Sort_Descending(unsortedList);
-		}
+        #region Insertion Sort
 
-		private static void Insertion_Sort(List<int> arr)
+        private static void Insertion_Sort(List<int> arr)
 		{
 			/**********************/
 			Console.WriteLine("Unsorted list");
@@ -78,5 +77,38 @@ namespace Sorting
             Console.ReadLine();
 
         }
+
+        private static void Task_1_2_2()
+        {
+            for (int n = 2; n < 1000; n++)
+            {
+                if(n < 8*(Math.Log10(n))/Math.Log10(2))
+                {
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine(n);
+                    Console.ReadLine();
+                    break;
+                }
+            }
+        }
+
+        private static void Task_1_2_3()
+        {
+            for (int n = 1; n < 1000; n++)
+            {
+                if (100*n*n < Math.Pow(2, n))
+                {
+                    Console.WriteLine(n);
+                    Console.ReadLine();
+                    break;
+                }
+            }
+        }
+
+        #endregion Insertion Sort
+
     }
 }
