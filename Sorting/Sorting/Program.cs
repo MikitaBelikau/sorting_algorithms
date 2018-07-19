@@ -8,9 +8,9 @@ namespace Sorting
 		public static void Main(string[] args)
 		{
 			#region Merge Sort
-			List<int?> unsortedList = new List<int?>() { 2, 1, 7, 3, 5, 4 };
+			List<int?> unsortedList = new List<int?>() {0, 11, 2, 1, 7, 3, 5, 4, 8, 6, 10, 9, -1 };
 
-			Merge_Sort(ref unsortedList, 0, 5);
+			Merge_Sort(ref unsortedList, 0, 12);
 
 			/**********************/
 			Console.WriteLine("Sorted list");
@@ -143,14 +143,13 @@ namespace Sorting
 				R[m] = arr[q + m + 1];
 			}
 
-			L[n1] = null;
-			R[n2] = null;
+			L[n1] = int.MaxValue;
+			R[n2] = int.MaxValue;
 
 			int i = 0;
 			int j = 0;
-			int k;
 
-			for (k = p; k < r; k++)
+			for (int k = p; k <= r; k++)
 			{
 				if (L[i] <= R[j])
 				{
@@ -162,20 +161,6 @@ namespace Sorting
 					arr[k] = R[j];
 					j++;
 				}
-			}
-
-			while (L[i] != null)
-			{
-				arr[k] = L[i];
-				i++;
-				k++;
-			}
-
-			while (R[j] != null)
-			{
-				arr[k] = R[j];
-				j++;
-				k++;
 			}
 		}
 
